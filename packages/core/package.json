@@ -1,0 +1,14 @@
+{
+  "name": "@openstatus/core",
+  "version": "1.0.0",
+  "description": "Real User Monitoring for OpenStatus",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "OpenStatus",
+  "license": "AGPL-3.0",
+  "dependencies": {
+    "web-vitals": "3.5.2"
+  }
+}
