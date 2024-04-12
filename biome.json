@@ -11,17 +11,17 @@
         "noUnusedVariables": "warn"
       }
     },
-    "ignore": ["node_modules", "dist", "data", ".wrangler"]
+    "ignore": ["node_modules", "dist", "data", ".wrangler", ".next"]
   },
   "formatter": {
     "indentStyle": "space",
     "indentWidth": 2,
     "enabled": true,
     "lineWidth": 80,
-    "ignore": ["node_modules", "dist", "data", ".wrangler"]
+    "ignore": ["node_modules", "dist", "data", ".wrangler", ".next"]
   },
   "organizeImports": {
     "enabled": true,
-    "ignore": ["node_modules", "dist", "data", ".wrangler"]
+    "ignore": ["node_modules", "dist", "data", ".wrangler", ".next"]
   }
 }

@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    /* Base Options: */
+    "esModuleInterop": true,
+    "target": "es2022",
+    "allowJs": true,
+    "moduleDetection": "force",
+    "module": "ESNext",
+    "outDir": "dist",
+    "declaration": true,
+    "composite": true,
+    "sourceMap": true,
+    "declarationMap": true,
+    "lib": ["es2022", "dom", "dom.iterable"],
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "moduleResolution": "node",
+    "preserveWatchOutput": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "strict": true
+  },
+  "include": ["src/**/*.js", "src/**/*.ts", "src/**/*.tsx"],
+  "exclude": ["node_modules"]
+}

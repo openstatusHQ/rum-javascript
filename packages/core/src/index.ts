@@ -14,7 +14,6 @@ function flushQueue() {
     // Use `navigator.sendBeacon()` if available, falling back to `fetch()`.
     navigator.sendBeacon?.("/analytics", body) ||
       fetch("/analytics", { body, method: "POST", keepalive: true });
-
     queue.clear();
   }
 }

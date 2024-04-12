@@ -1,5 +1,5 @@
 {
-  "name": "@openstatus/core",
+  "name": "@openstatus/next-monitoring",
   "version": "1.0.0",
   "description": "Real User Monitoring for OpenStatus",
   "scripts": {
@@ -8,10 +8,9 @@
   "keywords": [],
   "author": "OpenStatus",
   "license": "AGPL-3.0",
-  "dependencies": {
-    "@openstatus/": "3.5.2"
-  },
+  "dependencies": {},
   "peerDependencies": {
+    "next": "^14.0.0",
     "react": "18.2.0"
   },
   "devDependencies": {
