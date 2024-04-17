@@ -3,6 +3,7 @@ import { usePathname } from "next/navigation";
 import { useReportWebVitals } from "next/web-vitals";
 
 export type WebVitalsMetric = NextWebVitalsMetric[] & {
+  dsn: string;
   path: string;
   href: string;
   speed: string;
@@ -39,7 +40,7 @@ const getConnectionSpeed = () => {
     : "";
 };
 
-export const reportWebVitals = ({ endpoint }: { endpoint?: string }) => {
+export const reportWebVitals = ({ endpoint, dsn }: { endpoint?: string, dsn:string }) => {
   const pathName = usePathname();
   let href = "";
   if (endpoint) {
@@ -51,6 +52,6 @@ export const reportWebVitals = ({ endpoint }: { endpoint?: string }) => {
   const speed = getConnectionSpeed();
 
   useReportWebVitals((metric) =>
-    collectMetrics({ ...metric, path: pathName, href, speed }),
+    collectMetrics({ ...metric, path: pathName, href, speed, dsn }),
   );
 };

@@ -1,19 +1,35 @@
 {
   "name": "@openstatus/next-monitoring",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Real User Monitoring for OpenStatus",
   "scripts": {
+    "build": "bun build.ts ",
+    "build:declaration": "tsc --emitDeclarationOnly --project tsconfig.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "keywords": [
+    "openstatus",
+    "next.js",
+    "monitoring",
+    "real user monitoring",
+    "rum"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/openstatusHQ/rum-javascript.git"
+  },
   "author": "OpenStatus",
   "license": "AGPL-3.0",
   "dependencies": {},
   "peerDependencies": {
     "next": "^14.0.0",
-    "react": "18.2.0"
+    "react": "^18.2.0"
   },
   "devDependencies": {
-    "@types/react": "18.2.72"
+    "@types/react": "18.2.72",
+    "bun-types": "latest",
+    "bun-plugin-dts": "0.2.3"
   }
 }
