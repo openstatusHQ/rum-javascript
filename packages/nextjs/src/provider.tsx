@@ -1,5 +1,6 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import { reportWebVitals } from "./vitals";
 
 export const OpenStatusProvider = ({
@@ -9,6 +10,7 @@ export const OpenStatusProvider = ({
   endpoint?: string;
   dsn: string;
 }) => {
-  reportWebVitals({ endpoint, dsn });
+  const pathName = usePathname();
+  reportWebVitals({ endpoint, dsn, path: pathName });
   return <></>;
 };

@@ -1,5 +1,4 @@
 import type { NextWebVitalsMetric } from "next/app";
-import { usePathname } from "next/navigation";
 import { useReportWebVitals } from "next/web-vitals";
 
 export type WebVitalsMetric = NextWebVitalsMetric[] & {
@@ -7,10 +6,11 @@ export type WebVitalsMetric = NextWebVitalsMetric[] & {
   path: string;
   href: string;
   speed: string;
+  screen: string;
 };
 
 let queue: WebVitalsMetric[] = [];
-let ingestEndpoint = "https://vitals.openstat.us/ingest";
+let ingestEndpoint = "https://vitals.openstat.us";
 
 export const collectMetrics = (metric: WebVitalsMetric) => {
   queue.push(metric);
@@ -40,18 +40,21 @@ const getConnectionSpeed = () => {
     : "";
 };
 
-export const reportWebVitals = ({ endpoint, dsn }: { endpoint?: string, dsn:string }) => {
-  const pathName = usePathname();
-  let href = "";
+export const reportWebVitals = ({ endpoint, dsn, path }: { endpoint?: string, dsn: string, path: string }) => {
+  if (typeof window === "undefined" || !window) {
+    return;
+  }
   if (endpoint) {
     ingestEndpoint = endpoint;
   }
-  if (typeof window !== "undefined" && window?.location) {
-    href = window.location.href;
-  }
+
+  const href = window.location.href;
+
   const speed = getConnectionSpeed();
 
-  useReportWebVitals((metric) =>
-    collectMetrics({ ...metric, path: pathName, href, speed, dsn }),
-  );
+  const screen = `${window.screen.width}x${window.screen.height}`;
+  useReportWebVitals((metric) => {
+    collectMetrics({ ...metric, path, href, speed, dsn, screen })
+  });
+
 };

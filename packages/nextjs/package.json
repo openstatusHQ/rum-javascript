@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Real User Monitoring for OpenStatus",
   "scripts": {
-    "build": "bun build.ts ",
+    "build": "tsup ",
     "build:declaration": "tsc --emitDeclarationOnly --project tsconfig.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -27,12 +27,13 @@
   "license": "AGPL-3.0",
   "dependencies": {},
   "peerDependencies": {
-    "next": "^14.0.0",
-    "react": "^18.2.0"
+    "next": ">=14.0.0",
+    "react": ">=18.2.0"
   },
   "devDependencies": {
     "@types/react": "18.2.72",
     "bun-types": "latest",
-    "bun-plugin-dts": "0.2.3"
+    "bun-plugin-dts": "0.2.3",
+    "tsup": "8.0.2"
   }
 }

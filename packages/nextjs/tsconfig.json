@@ -1,15 +1,14 @@
 {
   "compilerOptions": {
     "jsx": "react-jsx",
-    /* Base Options: */
+    "target": "es6",
     "esModuleInterop": true,
-    "target": "es2022",
     "allowJs": true,
     "moduleDetection": "force",
     "module": "ESNext",
     "outDir": "dist",
     "declaration": true,
-    "composite": true,
+    "composite": false,
     "sourceMap": true,
     "declarationMap": true,
     "lib": ["es2022", "dom", "dom.iterable"],
