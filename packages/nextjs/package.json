@@ -1,6 +1,6 @@
 {
   "name": "@openstatus/next-monitoring",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Real User Monitoring for OpenStatus",
   "scripts": {
     "build": "tsup ",
@@ -17,7 +17,10 @@
     "next.js",
     "monitoring",
     "real user monitoring",
-    "rum"
+    "rum",
+    "nextjs",
+    "performance",
+    "web-vitals"
   ],
   "repository": {
     "type": "git",
