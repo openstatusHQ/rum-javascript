@@ -1,6 +1,6 @@
 {
   "name": "@openstatus/next-monitoring",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Real User Monitoring for OpenStatus",
   "scripts": {
     "build": "tsup ",
